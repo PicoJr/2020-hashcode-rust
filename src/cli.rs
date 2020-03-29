@@ -10,7 +10,9 @@ pub fn get_app() -> App<'static, 'static> {
         .arg(
             Arg::with_name("input")
                 .takes_value(true)
+                .multiple(true)
                 .required(true)
+                .min_values(1)
                 .help("input file"),
         )
 }
