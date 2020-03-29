@@ -3,7 +3,18 @@
 ## Example
 
 ```
-cargo run --release example/{a_example.txt,b_read_on.txt,c_incunabula.txt,e_so_many_books.txt,f_libraries_of_the_world.txt}
+cargo run --release example/*.txt
+```
+
+output:
+
+```
+example/a_example.txt done in 0s 0ms
+example/b_read_on.txt done in 0s 33ms
+example/c_incunabula.txt done in 4s 461ms
+example/d_tough_choices.txt done in 45s 566ms
+example/e_so_many_books.txt done in 1s 830ms
+example/f_libraries_of_the_world.txt done in 0s 287ms
 ```
 
 ## Score
