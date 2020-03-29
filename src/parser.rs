@@ -1,5 +1,5 @@
-use std::io::{BufRead, Write};
 use crate::solver::{InputDataSet, Library, OutputDataSet};
+use std::io::{BufRead, Write};
 use std::str::FromStr;
 
 pub fn parse_input_file(input_file: &mut dyn BufRead) -> anyhow::Result<InputDataSet> {
@@ -60,7 +60,10 @@ pub fn parse_input_file(input_file: &mut dyn BufRead) -> anyhow::Result<InputDat
     })
 }
 
-pub fn write_output_file(output_data: &OutputDataSet, output_file: &mut dyn Write) -> anyhow::Result<()> {
+pub fn write_output_file(
+    output_data: &OutputDataSet,
+    output_file: &mut dyn Write,
+) -> anyhow::Result<()> {
     writeln!(output_file, "{}", output_data.n_libraries)?;
     for lib in &output_data.library_orders {
         writeln!(output_file, "{} {}", lib.id, lib.n_books)?;
